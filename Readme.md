@@ -4,6 +4,27 @@
 - [Raspberry Pi 3 Model B v1.2](https://www.adafruit.com/product/3055)
 - [NXP PN7150 NFC Controller SBC Kit for Raspberry Pi](https://www.nxp.com/products/identification-and-security/nfc/nfc-reader-ics/development-kits-for-pn7150-plugn-play-nfc-controller:OM5578)
 
+## Requirements
+
+| Name | Edutainment Station |
+| ---- | ------------------- |
+| Purpose | |
+| Inputs | |
+| Outputs | |
+| Functions | |
+| Performance | |
+| Manufacturing Cost | |
+| Power | |
+| Physical Size and Weight | |
+
+## Specification
+
+## System Architecture
+
+## Component Design and Testing
+
+## System Integration and Testing
+
 ## Block Diagrams
 
 ### Raspberry Pi 3 Block Diagram and IO Map
