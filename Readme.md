@@ -9,12 +9,15 @@
 ### Raspberry Pi 3 Block Diagram and IO Map
 
 ![Raspberry Pi 3 Block Diagram](.imgs/pi3-block-diagram-rev4.png)
+[(shabaz, 2017)](https://www.element14.com/community/community/raspberry-pi/blog/2017/01/16/raspberry-pi-3-block-diagram)
 
 ![Raspberry Pi 3 IO Map](.imgs/raspberry_pi_circuit_note_fig2a.webp)
+[(Jameco Electronics, )](https://www.jameco.com/Jameco/workshop/circuitnotes/raspberry-pi-circuit-note.html)
 
 ### NXP PN7150 Block Diagram
 
 ![NXP PN7150 Block Diagram](.imgs/nxp-pn7150-block-diagram.jpg)
+[(DigiKey, 2016)](https://www.digikey.com/en/product-highlight/n/nxp-semi/pn7150-plug-n-play?utm_adgroup=General&slid=&gclid=Cj0KCQjw6rXeBRD3ARIsAD9ni9B7nDjbrQYIem_JmXNQUI-djQaeZzJiTdwNge0e3Wtz6qj8bwgBioQaAozsEALw_wcB)
 
 ## References
 
