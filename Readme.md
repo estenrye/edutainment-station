@@ -13,9 +13,9 @@
 | Outputs | One 7" Touchscreen Display that displays the name of the color with that color as its background; One Buzzer that indicates whether a RFID tag has been read. |
 | Functions | |
 | Performance | The target user for the system is a toddler, so typical human factors constraints apply to ensure the toddler maintains interest.  Buzzer should sound within 100 ms of the RFID tag having been read; Touchscreen display should display screen output within 100 ms of the RFID tag having been read;  Input from the touchscreen display, if used, should notify the user input has been received within 100 ms. |
-| Manufacturing Cost | |
-| Power | |
-| Physical Size and Weight | |
+| Manufacturing Cost | The electronic components for this device should cost no more than $200 USD. |
+| Power | The device should be able to run continuously for at least 30 minutes. The device should be able to run for at least 4 hours of moderate use. |
+| Physical Size and Weight | Small enough to embed into the top of a small desk sized appropriately to a toddler. |
 
 ## Specification
 
