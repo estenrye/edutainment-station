@@ -10,7 +10,7 @@
 
 ![Raspberry Pi 3 Block Diagram](.imgs/pi3-block-diagram-rev4.png)
 
-![Raspberry Pi 3 IO Map](raspberry_pi_circuit_note_fig2a.webp)
+![Raspberry Pi 3 IO Map](.imgs/raspberry_pi_circuit_note_fig2a.webp)
 
 ## References
 
