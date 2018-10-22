@@ -8,8 +8,8 @@
 
 | Name | Edutainment Station |
 | ---- | ------------------- |
-| Purpose | |
-| Inputs | |
+| Purpose | An expandable entertainment/education platform used to teach my daughter primary and secondary colors through an interactive display triggered by physical objects tagged with RFID tags. |
+| Inputs | Seven RFID Cards, each representing a different color (Red, Blue, Yellow, Green, Purple, Orange, Rainbow) |
 | Outputs | |
 | Functions | |
 | Performance | |
