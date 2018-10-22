@@ -12,7 +12,7 @@
 | Inputs | Seven RFID Cards, each representing a different color (Red, Blue, Yellow, Green, Purple, Orange, Rainbow) |
 | Outputs | One 7" Touchscreen Display that displays the name of the color with that color as its background; One Buzzer that indicates whether a RFID tag has been read. |
 | Functions | |
-| Performance | |
+| Performance | The target user for the system is a toddler, so typical human factors constraints apply to ensure the toddler maintains interest.  Buzzer should sound within 100 ms of the RFID tag having been read; Touchscreen display should display screen output within 100 ms of the RFID tag having been read;  Input from the touchscreen display, if used, should notify the user input has been received within 100 ms. |
 | Manufacturing Cost | |
 | Power | |
 | Physical Size and Weight | |
