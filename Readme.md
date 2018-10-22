@@ -10,7 +10,7 @@
 | ---- | ------------------- |
 | Purpose | An expandable entertainment/education platform used to teach my daughter primary and secondary colors through an interactive display triggered by physical objects tagged with RFID tags. |
 | Inputs | Seven RFID Cards, each representing a different color (Red, Blue, Yellow, Green, Purple, Orange, Rainbow) |
-| Outputs | |
+| Outputs | One 7" Touchscreen Display that displays the name of the color with that color as its background; One Buzzer that indicates whether a RFID tag has been read. |
 | Functions | |
 | Performance | |
 | Manufacturing Cost | |
