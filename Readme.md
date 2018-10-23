@@ -1,8 +1,10 @@
 # Edutainment Station for Raspberry Pi 3 Model B
 
 ## Hardware Components
-- [Raspberry Pi 3 Model B v1.2](https://www.adafruit.com/product/3055)
-- [NXP PN7150 NFC Controller SBC Kit for Raspberry Pi](https://www.nxp.com/products/identification-and-security/nfc/nfc-reader-ics/development-kits-for-pn7150-plugn-play-nfc-controller:OM5578)
+- 1 [Raspberry Pi 3 Model B v1.2](https://www.adafruit.com/product/3055)
+- 1 [NXP PN7150 NFC Controller SBC Kit for Raspberry Pi](https://www.nxp.com/products/identification-and-security/nfc/nfc-reader-ics/development-kits-for-pn7150-plugn-play-nfc-controller:OM5578)
+- 1 [Raspberry Pi 7" Touchscreen Display](https://www.amazon.com/gp/product/B0153R2A9I/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
+- 7 [13.56 MHz RFID/NFC White Tag - 1 KB](https://www.adafruit.com/product/360)
 
 ## Requirements
 
