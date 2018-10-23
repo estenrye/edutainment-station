@@ -8,19 +8,23 @@
 
 | Name | Edutainment Station |
 | ---- | ------------------- |
-| **Purpose** | An expandable entertainment/education platform used to teach my daughter primary and secondary colors through an interactive display triggered by physical objects tagged with RFID tags. |
-| **Inputs** | Seven RFID Cards, each representing a different color (Red, Blue, Yellow, Green, Purple, Orange, Rainbow) |
-| **Outputs** | One 7" Touchscreen Display that displays the name of the color with that color as its background; One Buzzer that indicates whether a RFID tag has been read. |
+| **Purpose** | An expandable entertainment/education platform used to teach my daughter primary and secondary colors through an interactive display triggered by physical objects tagged with NFC tags. |
+| **Inputs** | Seven NFC Cards, each representing a different color (Red, Blue, Yellow, Green, Purple, Orange, Rainbow) |
+| **Outputs** | One 7" Touchscreen Display that displays the name of the color with that color as its background; One Buzzer that indicates whether a NFC tag has been read. |
 | **Functions** | Default Mode: The edutainment station will display the animation for the last scanned tag.  If no tag has been scanned, the edutainment station will default to the rainbow animation. |
-| | When a RFID tag is brought in proximity of the RFID reader, the edutainment station will sound a single beep on the Buzzer to indicate the RFID tag has been read. |
-| | When a RFID tag is brought in proximity of the RFID reader, the edutainment station will select and display an animation for the scanned tag. |
+| | When a NFC tag is brought in proximity of the NFC reader, the edutainment station will sound a single beep on the Buzzer to indicate the NFC tag has been read. |
+| | When a NFC tag is brought in proximity of the NFC reader, the edutainment station will select and display an animation for the scanned tag. |
 | | When the Touchscreen on the edutainment station is touched, the animation will toggle between any avaialbe secondary animations and the main animation. |
-| **Performance** | The target user for the system is a toddler, so typical human factors constraints apply to ensure the toddler maintains interest.  Buzzer should sound within 100 ms of the RFID tag having been read; Touchscreen display should display screen output within 100 ms of the RFID tag having been read;  Input from the touchscreen display, if used, should notify the user input has been received within 100 ms. |
+| **Performance** | The target user for the system is a toddler, so typical human factors constraints apply to ensure the toddler maintains interest.  Buzzer should sound within 100 ms of the NFC tag having been read; Touchscreen display should display screen output within 100 ms of the NFC tag having been read;  Input from the touchscreen display, if used, should notify the user input has been received within 100 ms. |
 | **Manufacturing Cost** | The electronic components for this device should cost no more than $200 USD. |
 | **Power** | The device should be able to run continuously for at least 30 minutes on battery power. The device should be able to run for at least 4 hours of moderate use on battery power. The device should be able to charge and run simultaneously when on AC power. |
 | **Physical Size and Weight** | Small enough to embed into the top of a small desk sized appropriately to a toddler. |
 
 ## Specification
+
+![Edutainment System Class Diagram](.imgs/ClassDiagram.svg)
+
+The Tag class represents the physical objects with embedded NFC tags.  These objects will have one or more `animationIds` transmitted to the TagReader class when the object reaches close enough proximity to the NFC Controller's antenna.  The TagReader class encapsulates the NFC Controller logic into a single interface class.  When the `OnTagAdded` event is triggered, `HandleTag` will read the data on the NFC tag and notify the `Controller` class the tag has been read using the `NotifyTagRead` method.  Upon notification of a NFC tag read, the `Controller` class activates the `Buzzer` using the `Buzz` method and updates the `Display` by passing the first `animationId` to the `UpdateDisplay` method.  If the user touches the display, the `Display` class will notify the `Controller` class using the `NotifyTouchInput` method.  The `Controller` class will determine the next `animationId` to send to the `Display` class using `UpdateDisplay`.  If only one `animationId` is available, it will be sent again.
 
 ## System Architecture
 
@@ -41,6 +45,7 @@
 ### NXP PN7150 Block Diagram
 
 ![NXP PN7150 Block Diagram](.imgs/PN7150-Block-Diagram.PNG)
+
 [NXP. (2018)](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
 
 ## References

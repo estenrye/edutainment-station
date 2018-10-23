@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="40cm" height="19cm" viewBox="9 54 784 378" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="11" y="355" width="294.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="355" width="294.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="158.45" y="375">Tag</text>
+    <rect style="fill: #ffffff" x="11" y="383" width="294.9" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="383" width="294.9" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="396.2">+Id: string = F2:89:EF:0B</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="412.2">+TagRecords: string[] = [red, circle]</text>
+    <rect style="fill: #ffffff" x="11" y="419" width="294.9" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="419" width="294.9" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="11" y="254" width="294.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="254" width="294.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="158.45" y="274">TagReader</text>
+    <rect style="fill: #ffffff" x="11" y="282" width="294.9" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="282" width="294.9" height="8"/>
+    <rect style="fill: #ffffff" x="11" y="290" width="294.9" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="290" width="294.9" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="303.2">#OnTagAdded(sender,eventArgs): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="319.2">#OnTagRemoved(sender,eventArgs): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="335.2">#HandleTag(tag): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="338.591" y="322.342" width="110.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338.591" y="322.342" width="110.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="393.641" y="342.342">Buzzer</text>
+    <rect style="fill: #ffffff" x="338.591" y="350.342" width="110.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338.591" y="350.342" width="110.1" height="8"/>
+    <rect style="fill: #ffffff" x="338.591" y="358.342" width="110.1" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338.591" y="358.342" width="110.1" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="341.591" y="371.542">+Buzz(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="496.4" y="359" width="294.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="496.4" y="359" width="294.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="643.85" y="379">Display</text>
+    <rect style="fill: #ffffff" x="496.4" y="387" width="294.9" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="496.4" y="387" width="294.9" height="8"/>
+    <rect style="fill: #ffffff" x="496.4" y="395" width="294.9" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="496.4" y="395" width="294.9" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="499.4" y="408.2">+UpdateDisplay(animationId): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="499.4" y="424.2">#OnTouchInput(sender,eventArgs): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="482.682" y="245.864" width="310.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="482.682" y="245.864" width="310.3" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="637.832" y="265.864">Controller</text>
+    <rect style="fill: #ffffff" x="482.682" y="273.864" width="310.3" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="482.682" y="273.864" width="310.3" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="287.064">+AnimationIds: string[] = [red, circle]</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="303.064">+CurrentAnimationId: string</text>
+    <rect style="fill: #ffffff" x="482.682" y="309.864" width="310.3" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="482.682" y="309.864" width="310.3" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="323.064">+NotifyTagRead(tagData): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="339.064">+NotifyTouchInput(touchEventArgs): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="115.35" y="55.45" width="43.3" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="115.35" y="55.45" width="43.3" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="137" y="79.25">
+      <tspan x="137" y="79.25">Tag</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="226.375" y="55.45" width="83.25" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="226.375" y="55.45" width="83.25" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="268" y="79.25">
+      <tspan x="268" y="79.25">TagReader</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="363.025" y="55.45" width="76.9" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="363.025" y="55.45" width="76.9" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="401.475" y="79.25">
+      <tspan x="401.475" y="79.25">Controller</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="503.5" y="55.45" width="76.9" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="503.5" y="55.45" width="76.9" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="541.95" y="79.25">
+      <tspan x="541.95" y="79.25">Display</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="363.025" y="140.9" width="76.9" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="363.025" y="140.9" width="76.9" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="401.475" y="164.7">
+      <tspan x="401.475" y="164.7">Buzzer</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="166.823" y1="74.45" x2="225.383" y2="74.45"/>
+    <polygon style="fill: #ffffff" points="159.652,74.45 164.652,69.45 169.652,74.45 164.652,79.45 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="159.652,74.45 164.652,69.45 169.652,74.45 164.652,79.45 "/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="310.632" y1="74.45" x2="362.029" y2="74.45"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="401.475" y1="139.904" x2="401.475" y2="94.4461"/>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="495.33" y1="74.45" x2="440.924" y2="74.45"/>
+    <polygon style="fill: #ffffff" points="502.501,74.45 497.501,79.45 492.501,74.45 497.501,69.45 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="502.501,74.45 497.501,79.45 492.501,74.45 497.501,69.45 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="166" y="89.4081">
+    <tspan x="166" y="89.4081">M</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="217" y="139">
+    <tspan x="217" y="139"></tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="408.193" y="107.336">
+    <tspan x="408.193" y="107.336">1</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="213.458" y="89.215">
+    <tspan x="213.458" y="89.215">1</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="408.373" y="136.169">
+    <tspan x="408.373" y="136.169">1</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="315.661" y="89.215">
+    <tspan x="315.661" y="89.215">1</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="351.903" y="89.215">
+    <tspan x="351.903" y="89.215">1</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="488.388" y="89.215">
+    <tspan x="488.388" y="89.215">1</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="447.52" y="89.215">
+    <tspan x="447.52" y="89.215">1</tspan>
+  </text>
+</svg>
