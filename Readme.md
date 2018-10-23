@@ -40,11 +40,12 @@
 
 ### NXP PN7150 Block Diagram
 
-![NXP PN7150 Block Diagram](.imgs/nxp-pn7150-block-diagram.jpg)
-[(DigiKey, 2016)](https://www.digikey.com/en/product-highlight/n/nxp-semi/pn7150-plug-n-play?utm_adgroup=General&slid=&gclid=Cj0KCQjw6rXeBRD3ARIsAD9ni9B7nDjbrQYIem_JmXNQUI-djQaeZzJiTdwNge0e3Wtz6qj8bwgBioQaAozsEALw_wcB)
+![NXP PN7150 Block Diagram](.imgs/PN7150-Block-Diagram.PNG)
+[NXP. (2018)](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
 
 ## References
 
 - DigiKey. (2016). [Product highlights:&nbsp;PN7150 plug-and-play NFC controller.](https://www.digikey.com/en/product-highlight/n/nxp-semi/pn7150-plug-n-play?utm_adgroup=General&slid=&gclid=Cj0KCQjw6rXeBRD3ARIsAD9ni9B7nDjbrQYIem_JmXNQUI-djQaeZzJiTdwNge0e3Wtz6qj8bwgBioQaAozsEALw_wcB)
 - Jameco [Electronics.Raspberry pi pinout diagram | circuit notes.](https://www.jameco.com/Jameco/workshop/circuitnotes/raspberry-pi-circuit-note.html)
+- NXP. (2018). [PN7150 Product Data Sheet.](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
 - shabaz. (2017). [Raspberry Pi 3 Block Diagram.](https://www.element14.com/community/community/raspberry-pi/blog/2017/01/16/raspberry-pi-3-block-diagram)
