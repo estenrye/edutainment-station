@@ -26,5 +26,14 @@ namespace edutainment_station
         {
             this.InitializeComponent();
         }
+
+        
+
+        private void UpdateDisplay_Click(object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            backgroundCanvas.Background = button.Background;
+            ForegroundText.Text = button.Content.ToString();
+        }
     }
 }
