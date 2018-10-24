@@ -27,7 +27,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Canvas Name="backgroundCanvas" Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="3" Background="Red" />
-        <TextBlock Name="ForegroundText" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Text="Red" TextAlignment="Center" VerticalAlignment="Center" FontSize="78"/>
+        <Rectangle Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Fill="#33000000"/>
+        <TextBlock Name="ForegroundText" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Text="Red" TextAlignment="Center" VerticalAlignment="Center" FontSize="125" FontWeight="ExtraBold" Foreground="White"/>
+        <TextBlock Name="NFCData" Grid.Row="5" Grid.Column="2" Text="ScanResultHere!"/>
         <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Red" Background="Red" Click="UpdateDisplay_Click"/>
         <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Orange" Background="Orange" Click="UpdateDisplay_Click"/>
         <Button Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Yellow" Background="Yellow" Click="UpdateDisplay_Click"/>
