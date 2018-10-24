@@ -1,13 +1,13 @@
 ﻿<Page
-    x:Class="edutainment_station.MainPage"
+    x:Class="EdutainmentStation.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:edutainment_station"
+    xmlns:local="using:EdutainmentStation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -29,6 +29,7 @@
         <Canvas Name="backgroundCanvas" Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="3" Background="Red" />
         <Rectangle Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Fill="#33000000"/>
         <TextBlock Name="ForegroundText" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Text="Red" TextAlignment="Center" VerticalAlignment="Center" FontSize="125" FontWeight="ExtraBold" Foreground="White"/>
+        <TextBlock Name="DeviceStatus" Grid.Row="0" Grid.Column="0" Text="NoDevice!"/>
         <TextBlock Name="NFCData" Grid.Row="5" Grid.Column="2" Text="ScanResultHere!"/>
         <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Red" Background="Red" Click="UpdateDisplay_Click"/>
         <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Orange" Background="Orange" Click="UpdateDisplay_Click"/>
