@@ -6,6 +6,11 @@
 - 1 [Raspberry Pi 7" Touchscreen Display](https://www.amazon.com/gp/product/B0153R2A9I/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
 - 7 [13.56 MHz RFID/NFC White Tag - 1 KB](https://www.adafruit.com/product/360)
 
+## Software Packages
+
+- [Etcher](https://etcher.io/)
+- [Windows Driver Kit (WDK)](https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)
+
 ## Requirements
 
 | Name | Edutainment Station |
@@ -59,5 +64,6 @@ Draw state diagram from touch input interrupt to display update.
 
 - DigiKey. (2016). [Product highlights:&nbsp;PN7150 plug-and-play NFC controller.](https://www.digikey.com/en/product-highlight/n/nxp-semi/pn7150-plug-n-play?utm_adgroup=General&slid=&gclid=Cj0KCQjw6rXeBRD3ARIsAD9ni9B7nDjbrQYIem_JmXNQUI-djQaeZzJiTdwNge0e3Wtz6qj8bwgBioQaAozsEALw_wcB)
 - Jameco [Electronics.Raspberry pi pinout diagram | circuit notes.](https://www.jameco.com/Jameco/workshop/circuitnotes/raspberry-pi-circuit-note.html)
+- NXP. (2017). [PN71x0 windows IoT porting guidelines.](https://www.nxp.com/docs/en/application-note/AN11767.pdf)
 - NXP. (2018). [PN7150 Product Data Sheet.](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
 - shabaz. (2017). [Raspberry Pi 3 Block Diagram.](https://www.element14.com/community/community/raspberry-pi/blog/2017/01/16/raspberry-pi-3-block-diagram)
