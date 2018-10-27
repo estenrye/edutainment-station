@@ -3,9 +3,11 @@ using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using Windows.Networking.Proximity;
+using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -95,36 +97,46 @@ namespace NFCBusyBox
         {
             var result = coreDispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-
-                var button = (Button)null;
-                switch(message.ToLower())
+                ForegroundText.Text = message.ToUpper();
+                switch (message.ToLower())
                 {
                     case "red":
-                        button = RedButton;
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Red);
                         break;
                     case "orange":
-                        button = OrangeButton;
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Orange);
                         break;
                     case "yellow":
-                        button = YellowButton;
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Yellow);
                         break;
                     case "green":
-                        button = GreenButton;
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Green);
                         break;
                     case "blue":
-                        button = BlueButton;
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Blue);
                         break;
                     case "purple":
-                        button = PurpleButton;
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Purple);
+                        break;
+                    case "brown":
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Brown);
                         break;
                     case "rainbow":
-                        button = RainbowButton;
+                        backgroundCanvas.Background = new LinearGradientBrush(new GradientStopCollection()
+                        {
+                            new GradientStop() { Color = Colors.Red, Offset=0.0 },
+                            new GradientStop() { Color = Colors.Orange, Offset=0.17 },
+                            new GradientStop() { Color = Colors.Yellow, Offset=0.33 },
+                            new GradientStop() { Color = Colors.Green, Offset=0.5 },
+                            new GradientStop() { Color = Colors.Blue, Offset=0.67 },
+                            new GradientStop() { Color = Colors.Indigo, Offset=0.83 },
+                            new GradientStop() { Color = Colors.Violet, Offset=1.0 }
+                        }, 90);
                         break;
                     default:
-                        return;
+                        backgroundCanvas.Background = new SolidColorBrush(Colors.Black);
+                        break;
                 }
-                backgroundCanvas.Background = button.Background;
-                ForegroundText.Text = button.Content.ToString();
             });
         }
 
