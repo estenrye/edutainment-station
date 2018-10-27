@@ -1,4 +1,7 @@
-﻿using System;
+﻿using NdefLibrary.Ndef;
+using System;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Networking.Proximity;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
@@ -15,6 +18,7 @@ namespace NFCBusyBox
     {
         private ProximityDevice proximityDevice;
         private CoreDispatcher coreDispatcher;
+        private long subscriptionIdNdef = 0;
 
         public MainPage()
         {
@@ -32,11 +36,58 @@ namespace NFCBusyBox
         private void ProximityDevice_DeviceDeparted(ProximityDevice sender)
         {
             UpdateDisplay_DeviceStatus(StatusEnum.DeviceDeparted);
+            if (subscriptionIdNdef != 0)
+            {
+                sender.StopSubscribingForMessage(subscriptionIdNdef);
+                subscriptionIdNdef = 0;
+            }
         }
 
         private void ProximityDevice_DeviceArrived(ProximityDevice sender)
         {
             UpdateDisplay_DeviceStatus(StatusEnum.DeviceArrived);
+            if (subscriptionIdNdef == 0)
+            {
+                subscriptionIdNdef = sender.SubscribeForMessage("NDEF", ProximityDevice_MessageReceivedHandler);
+            }
+        }
+
+        private void ProximityDevice_MessageReceivedHandler(ProximityDevice sender, ProximityMessage message)
+        {
+            var rawMessage = message.Data.ToArray();
+
+            NdefMessage ndefMessage;
+            try
+            {
+                ndefMessage = NdefMessage.FromByteArray(rawMessage);
+            }
+            catch(NdefException e)
+            {
+                UpdateDisplay_DeviceStatus(StatusEnum.InvalidNdefMessage);
+                UpdateDisplay_DeviceMessage(e.Message);
+                return;
+            }
+
+            foreach(NdefRecord record in ndefMessage)
+            {
+                UpdateDisplay_DeviceStatus(StatusEnum.MessageReceived);
+
+                if (record.Id != null)
+                {
+                    var id = Encoding.UTF8.GetString(record.Id, 0, record.Id.Length);
+                    UpdateDisplay_DeviceId(id);
+                }
+
+                var specializedType = record.CheckSpecializedType(true);
+
+                if (NdefTextRecord.IsRecordType(record))
+                {
+                    NdefTextRecord textRecord = new NdefTextRecord(record);
+                    var textMessage = textRecord.Text;
+                    UpdateDisplay_DeviceMessage(textMessage);
+                }
+            }
+
         }
 
         private void UpdateDisplay_Click(object sender, RoutedEventArgs e)
@@ -56,5 +107,28 @@ namespace NFCBusyBox
                 }
             });
         }
+
+        private void UpdateDisplay_DeviceMessage(string message)
+        {
+            var result = coreDispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                if (Message != null)
+                {
+                    Message.Text = message;
+                }
+            });
+        }
+
+        private void UpdateDisplay_DeviceId(string id)
+        {
+            var result = coreDispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                if (Id != null)
+                {
+                    Id.Text = $"Id: {id}";
+                }
+            });
+        }
+
     }
 }

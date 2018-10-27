@@ -9,6 +9,8 @@ namespace NFCBusyBox
     enum StatusEnum
     {
         DeviceArrived,
-        DeviceDeparted
+        DeviceDeparted,
+        InvalidNdefMessage,
+        MessageReceived
     }
 }
