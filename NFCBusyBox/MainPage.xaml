@@ -32,13 +32,13 @@
         <TextBlock Name="DeviceStatus" Grid.Row="0" Grid.Column="0" Text="NoDevice!"/>
         <TextBlock Name="Id" Grid.Row="0" Grid.Column="1" Text="No Id!"/>
         <TextBlock Name="Message" Grid.Row="0" Grid.Column="2" Text="No Message"/>
-        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Red" Background="Red" Click="UpdateDisplay_Click"/>
-        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Orange" Background="Orange" Click="UpdateDisplay_Click"/>
-        <Button Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Yellow" Background="Yellow" Click="UpdateDisplay_Click"/>
-        <Button Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Green" Background="Green" Click="UpdateDisplay_Click"/>
-        <Button Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Blue" Background="Blue" Click="UpdateDisplay_Click"/>
-        <Button Grid.Row="6" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Purple" Background="Purple" Click="UpdateDisplay_Click"/>
-        <Button Grid.Row="7" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Rainbow" Click="UpdateDisplay_Click">
+        <Button Name="RedButton" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Red" Background="Red" Click="UpdateDisplay_Click"/>
+        <Button Name="OrangeButton" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Orange" Background="Orange" Click="UpdateDisplay_Click"/>
+        <Button Name="YellowButton" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Yellow" Background="Yellow" Click="UpdateDisplay_Click"/>
+        <Button Name="GreenButton" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Green" Background="Green" Click="UpdateDisplay_Click"/>
+        <Button Name="BlueButton" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Blue" Background="Blue" Click="UpdateDisplay_Click"/>
+        <Button Name="PurpleButton" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Purple" Background="Purple" Click="UpdateDisplay_Click"/>
+        <Button Name="RainbowButton" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Rainbow" Click="UpdateDisplay_Click">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
                     <GradientStop Color="Red" Offset="0.0"/>

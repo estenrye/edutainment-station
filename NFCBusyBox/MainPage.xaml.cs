@@ -85,9 +85,47 @@ namespace NFCBusyBox
                     NdefTextRecord textRecord = new NdefTextRecord(record);
                     var textMessage = textRecord.Text;
                     UpdateDisplay_DeviceMessage(textMessage);
+                    UpdateDisplay_MessageReceived(textMessage);
                 }
             }
 
+        }
+
+        private void UpdateDisplay_MessageReceived(string message)
+        {
+            var result = coreDispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+
+                var button = (Button)null;
+                switch(message.ToLower())
+                {
+                    case "red":
+                        button = RedButton;
+                        break;
+                    case "orange":
+                        button = OrangeButton;
+                        break;
+                    case "yellow":
+                        button = YellowButton;
+                        break;
+                    case "green":
+                        button = GreenButton;
+                        break;
+                    case "blue":
+                        button = BlueButton;
+                        break;
+                    case "purple":
+                        button = PurpleButton;
+                        break;
+                    case "rainbow":
+                        button = RainbowButton;
+                        break;
+                    default:
+                        return;
+                }
+                backgroundCanvas.Background = button.Background;
+                ForegroundText.Text = button.Content.ToString();
+            });
         }
 
         private void UpdateDisplay_Click(object sender, RoutedEventArgs e)
