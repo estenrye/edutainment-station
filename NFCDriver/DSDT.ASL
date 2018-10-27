@@ -673,5 +673,87 @@ DefinitionBlock("DSDT.AML", "DSDT", 0x05, "MSFT", "EDK2", 0x00000002)
                 }
             })
         }
+        Device(NFCD)
+        {
+            Name(_HID, "PN71x0")
+            Name(_CID, "ACPI\PN71x0")
+            Name(_CRS, ResourceTemplate()
+                {
+                    I2CSerialBus(0x28, ControllerInitiated, 0x61a80, AddressingMode7Bit, "\\_SB.I2C1", 0, ResourceConsumer,,)
+                    GpioInt(Edge, ActiveHigh, Exclusive, PullDefault, 0, "\\_SB.GPI0", 0, ResourceConsumer,,) {23}
+                }
+            )
+            Name(NFCP, ResourceTemplate()
+                {
+                    GpioIO(Exclusive, PullDefault, 0, 0, IoRestrictionNone, "\\_SB.GPI0", 0, ResourceConsumer,,) {24}
+                }
+            )
+            Scope(GPI0)
+            {
+                OperationRegion(NFPO, GeneralPurposeIO, Zero, One)
+            }
+            Field(\_SB_.GPI0.NFPO, ByteAcc, NoLock, Preserve)
+            {
+                Connection(\_SB_.NFCD.NFCP), MGPE, 1
+            }
+            Method(POON, 0x0, NotSerialized)
+            {
+                Store(One, MGPE)
+            }
+            Method(POOF, 0x0, NotSerialized)
+            {
+                Store(Zero, MGPE)
+            }
+            Method(_DSM, 0x4, NotSerialized)
+            {
+                Store("Method NFC _DSM begin", Debug)
+                If(LEqual(Arg0, Buffer(0x10)
+                        {
+                            0xc4, 0xf6, 0xe7, 0xa2, 0x38, 0x96, 0x85, 0x44, 0x9f, 0x12, 0x6b, 0x4e, 0x20, 0xb6, 0x0d, 0x63
+                        }
+                    )
+                )
+                {
+                    If(LEqual(Arg2, Zero))
+                    {
+                        Store("Method NFC _DSM QUERY", Debug)
+                        If(LEqual(Arg1, One))
+                        {
+                            \_SB_.NFCD.POOF()
+                            Sleep(0x14)
+                            Return(Buffer(One)
+                                {
+                                    0x0F
+                                }
+                            )
+                        }
+                    }
+                    If(LEqual(Arg2, 0x2))
+                    {
+                        Store("Method NFC _DSM SETPOWERMODE", Debug)
+                        If(LEqual(Arg3, One))
+                        {
+                            \_SB_.NFCD.POON()
+                            Sleep(0x14)
+                        }
+                        If(LEqual(Arg3, Zero))
+                        {
+                            \_SB_.NFCD.POOF()
+                            Sleep(0x14)
+                        }
+                    }
+                    If(LEqual(Arg2, 0x3))
+                    {
+                        Store("Method NFC _DSM EEPROM Config", Debug)
+                        Return(Buffer(0x13)
+                            {
+                                0x9c, 0x1f, 0x38, 0x19, 0xa8, 0xb9, 0x4b, 0xab, 0xa1, 0xba, 0xd0, 0x20, 0x76, 0x88, 0x2a, 0xe0,
+                                0x3, 0x1, 0x8
+                            }
+                        )
+                    }
+                }
+            }
+        }
     }
 }
