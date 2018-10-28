@@ -1,135 +1,199 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="40cm" height="19cm" viewBox="9 54 784 378" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="48cm" height="45cm" viewBox="41 54 958 881" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
-    <rect style="fill: #ffffff" x="11" y="355" width="294.9" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="355" width="294.9" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="158.45" y="375">Tag</text>
-    <rect style="fill: #ffffff" x="11" y="383" width="294.9" height="36"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="383" width="294.9" height="36"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="396.2">+Id: string = F2:89:EF:0B</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="412.2">+TagRecords: string[] = [red, circle]</text>
-    <rect style="fill: #ffffff" x="11" y="419" width="294.9" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="419" width="294.9" height="8"/>
+    <rect style="fill: #ffffff" x="43" y="802" width="572.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43" y="802" width="572.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="329.05" y="822">ProximityDevice</text>
+    <rect style="fill: #ffffff" x="43" y="830" width="572.1" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43" y="830" width="572.1" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46" y="843.2">+Id: string = F2:89:EF:0B</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46" y="859.2">+DeviceArrived: DeviceArrivedEventHandler</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46" y="875.2">+DeviceDeparted: DeviceDepartedEventHandler</text>
+    <rect style="fill: #ffffff" x="43" y="882" width="572.1" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43" y="882" width="572.1" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46" y="895.2">+SubscribeForMessage(messageType:string,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46" y="911.2">                     messageReceivedHandler:MessageReceivedHandler): long</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46" y="927.2">+StopSubscribingForMessage(subscriptionId:long): void</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="11" y="254" width="294.9" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="254" width="294.9" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="158.45" y="274">TagReader</text>
-    <rect style="fill: #ffffff" x="11" y="282" width="294.9" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="282" width="294.9" height="8"/>
-    <rect style="fill: #ffffff" x="11" y="290" width="294.9" height="52"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="11" y="290" width="294.9" height="52"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="303.2">#OnTagAdded(sender,eventArgs): void</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="319.2">#OnTagRemoved(sender,eventArgs): void</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="14" y="335.2">#HandleTag(tag): void</text>
+    <rect style="fill: #ffffff" x="42" y="220" width="518.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="42" y="220" width="518.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="301.1" y="240">TagReader</text>
+    <rect style="fill: #ffffff" x="42" y="248" width="518.2" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="42" y="248" width="518.2" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="261.2">-proximityDevice: ProximityDevice</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="277.2">-Debug: bool = false</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="293.2">-subscriptionIdNdef: long = 0</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="309.2">+OnDeviceStatusChanged: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="325.2">+OnMessageArrived: event</text>
+    <rect style="fill: #ffffff" x="42" y="332" width="518.2" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="42" y="332" width="518.2" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="345.2">+ToggleDebug(sender:object,args:DebugStatusChangedEventArgs): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="361.2">-OnDeviceDeparted(sender:ProximityDevice): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="377.2">-OnDeviceArrived(sender:ProximityDevice): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="393.2">-OnMessageReceived(sender:ProximityDevice,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="45" y="409.2">                   message:ProximityMessage): void</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="338.591" y="322.342" width="110.1" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338.591" y="322.342" width="110.1" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="393.641" y="342.342">Buzzer</text>
-    <rect style="fill: #ffffff" x="338.591" y="350.342" width="110.1" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338.591" y="350.342" width="110.1" height="8"/>
-    <rect style="fill: #ffffff" x="338.591" y="358.342" width="110.1" height="20"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="338.591" y="358.342" width="110.1" height="20"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="341.591" y="371.542">+Buzz(): void</text>
+    <rect style="fill: #ffffff" x="580.592" y="342.342" width="110.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="580.592" y="342.342" width="110.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="635.642" y="362.342">Buzzer</text>
+    <rect style="fill: #ffffff" x="580.592" y="370.342" width="110.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="580.592" y="370.342" width="110.1" height="8"/>
+    <rect style="fill: #ffffff" x="580.592" y="378.342" width="110.1" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="580.592" y="378.342" width="110.1" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="583.592" y="391.542">+Buzz(): void</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="496.4" y="359" width="294.9" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="496.4" y="359" width="294.9" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="643.85" y="379">Display</text>
-    <rect style="fill: #ffffff" x="496.4" y="387" width="294.9" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="496.4" y="387" width="294.9" height="8"/>
-    <rect style="fill: #ffffff" x="496.4" y="395" width="294.9" height="36"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="496.4" y="395" width="294.9" height="36"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="499.4" y="408.2">+UpdateDisplay(animationId): void</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="499.4" y="424.2">#OnTouchInput(sender,eventArgs): void</text>
+    <rect style="fill: #ffffff" x="410.4" y="434" width="587.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="410.4" y="434" width="587.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="704.15" y="454">Display</text>
+    <rect style="fill: #ffffff" x="410.4" y="462" width="587.5" height="212"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="410.4" y="462" width="587.5" height="212"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="475.2">+OnToggleDebug: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="491.2">+PropertyChanged: event</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="507.2">+DeviceStatus: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="523.2">+Message: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="539.2">+Log: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="555.2">+Background: Brush</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="571.2">-tagReader: TagReader</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="587.2">-coreDispatcher: CoreDispatcher</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="603.2">-Debug: bool = false</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="619.2">-deviceStatus: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="635.2">-message: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="651.2">-log: string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="667.2">-background: Brush</text>
+    <rect style="fill: #ffffff" x="410.4" y="674" width="587.5" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="410.4" y="674" width="587.5" height="100"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="687.2">-OnMessageArrived(sender:object,e:MessageArrivedEventArgs): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="703.2">-OnDevicesStatusChanged(sender:object,e:DeviceStatusChangedEventArgs): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="719.2">-SelectBackgroundFromMessage(message:string): Brush</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="735.2">#SetProperty&lt;T&gt;(inout storage:T,value:T,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="751.2">                propertyName:string): bool</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="413.4" y="767.2">#OnPropertyChanged(propertyName:string): void</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="482.682" y="245.864" width="310.3" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="482.682" y="245.864" width="310.3" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="637.832" y="265.864">Controller</text>
-    <rect style="fill: #ffffff" x="482.682" y="273.864" width="310.3" height="36"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="482.682" y="273.864" width="310.3" height="36"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="287.064">+AnimationIds: string[] = [red, circle]</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="303.064">+CurrentAnimationId: string</text>
-    <rect style="fill: #ffffff" x="482.682" y="309.864" width="310.3" height="36"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="482.682" y="309.864" width="310.3" height="36"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="323.064">+NotifyTagRead(tagData): void</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="485.682" y="339.064">+NotifyTouchInput(touchEventArgs): void</text>
+    <rect style="fill: #ffffff" x="579.682" y="218.864" width="310.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="579.682" y="218.864" width="310.3" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="734.832" y="238.864">Controller</text>
+    <rect style="fill: #ffffff" x="579.682" y="246.864" width="310.3" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="579.682" y="246.864" width="310.3" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="582.682" y="260.064">+AnimationIds: string[] = [red, circle]</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="582.682" y="276.064">+CurrentAnimationId: string</text>
+    <rect style="fill: #ffffff" x="579.682" y="282.864" width="310.3" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="579.682" y="282.864" width="310.3" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="582.682" y="296.064">+NotifyTagRead(tagData): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="582.682" y="312.064">+NotifyTouchInput(touchEventArgs): void</text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="115.35" y="55.45" width="43.3" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="115.35" y="55.45" width="43.3" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="137" y="79.25">
-      <tspan x="137" y="79.25">Tag</tspan>
+    <rect style="fill: #ffffff" x="49.125" y="55.45" width="111.75" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="49.125" y="55.45" width="111.75" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="105" y="79.25">
+      <tspan x="105" y="79.25">ProximityDevice</tspan>
     </text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="226.375" y="55.45" width="83.25" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="226.375" y="55.45" width="83.25" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="268" y="79.25">
-      <tspan x="268" y="79.25">TagReader</tspan>
+    <rect style="fill: #ffffff" x="226.374" y="55.45" width="83.25" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="226.374" y="55.45" width="83.25" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="267.999" y="79.25">
+      <tspan x="267.999" y="79.25">TagReader</tspan>
     </text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="363.025" y="55.45" width="76.9" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="363.025" y="55.45" width="76.9" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="401.475" y="79.25">
-      <tspan x="401.475" y="79.25">Controller</tspan>
+    <rect style="fill: #ffffff" x="363.026" y="55.45" width="76.9" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="363.026" y="55.45" width="76.9" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="401.476" y="79.25">
+      <tspan x="401.476" y="79.25">Controller</tspan>
     </text>
   </g>
   <g>
     <rect style="fill: #ffffff" x="503.5" y="55.45" width="76.9" height="38"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="503.5" y="55.45" width="76.9" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="541.95" y="79.25">
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="541.95" y="79.25">
       <tspan x="541.95" y="79.25">Display</tspan>
     </text>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="363.025" y="140.9" width="76.9" height="38"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="363.025" y="140.9" width="76.9" height="38"/>
-    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="401.475" y="164.7">
-      <tspan x="401.475" y="164.7">Buzzer</tspan>
+    <rect style="fill: #ffffff" x="363.024" y="140.9" width="76.9" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="363.024" y="140.9" width="76.9" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="401.474" y="164.7">
+      <tspan x="401.474" y="164.7">Buzzer</tspan>
     </text>
   </g>
   <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="166.823" y1="74.45" x2="225.383" y2="74.45"/>
-    <polygon style="fill: #ffffff" points="159.652,74.45 164.652,69.45 169.652,74.45 164.652,79.45 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="159.652,74.45 164.652,69.45 169.652,74.45 164.652,79.45 "/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="169.048" y1="74.45" x2="225.369" y2="74.45"/>
+    <polygon style="fill: #ffffff" points="161.877,74.45 166.877,69.45 171.877,74.45 166.877,79.45 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="161.877,74.45 166.877,69.45 171.877,74.45 166.877,79.45 "/>
   </g>
-  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="310.632" y1="74.45" x2="362.029" y2="74.45"/>
-  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="401.475" y1="139.904" x2="401.475" y2="94.4461"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="310.631" y1="74.45" x2="362.029" y2="74.45"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="401.474" y1="139.904" x2="401.476" y2="94.4461"/>
   <g>
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="495.33" y1="74.45" x2="440.924" y2="74.45"/>
-    <polygon style="fill: #ffffff" points="502.501,74.45 497.501,79.45 492.501,74.45 497.501,69.45 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="502.501,74.45 497.501,79.45 492.501,74.45 497.501,69.45 "/>
+    <polygon style="fill: #ffffff" points="502.502,74.45 497.502,79.45 492.502,74.45 497.502,69.45 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="502.502,74.45 497.502,79.45 492.502,74.45 497.502,69.45 "/>
   </g>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="166" y="89.4081">
-    <tspan x="166" y="89.4081">M</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="166" y="89.4082">
+    <tspan x="166" y="89.4082">M</tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="217" y="139">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="217" y="139">
     <tspan x="217" y="139"></tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="408.193" y="107.336">
-    <tspan x="408.193" y="107.336">1</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="408.194" y="107.336">
+    <tspan x="408.194" y="107.336">1</tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="213.458" y="89.215">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="213.458" y="89.215">
     <tspan x="213.458" y="89.215">1</tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="408.373" y="136.169">
-    <tspan x="408.373" y="136.169">1</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="408.374" y="136.169">
+    <tspan x="408.374" y="136.169">1</tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="315.661" y="89.215">
-    <tspan x="315.661" y="89.215">1</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="315.66" y="89.215">
+    <tspan x="315.66" y="89.215">1</tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="351.903" y="89.215">
-    <tspan x="351.903" y="89.215">1</tspan>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="351.902" y="89.215">
+    <tspan x="351.902" y="89.215">1</tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="488.388" y="89.215">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="488.388" y="89.215">
     <tspan x="488.388" y="89.215">1</tspan>
   </text>
-  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="447.52" y="89.215">
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="447.52" y="89.215">
     <tspan x="447.52" y="89.215">1</tspan>
   </text>
+  <g>
+    <rect style="fill: #ffffff" x="53.9" y="689" width="318" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="53.9" y="689" width="318" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="212.9" y="709">ProximityMessage</text>
+    <rect style="fill: #ffffff" x="53.9" y="717" width="318" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="53.9" y="717" width="318" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="56.9" y="730.2">-Records: NdefRecord[]</text>
+    <rect style="fill: #ffffff" x="53.9" y="737" width="318" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="53.9" y="737" width="318" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="56.9" y="750.2">+GetEnumerator(): Enumerator&lt;NdefRecord&gt;</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="47.9" y="558" width="318" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="47.9" y="558" width="318" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="206.9" y="578">NdefRecord</text>
+    <rect style="fill: #ffffff" x="47.9" y="586" width="318" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="47.9" y="586" width="318" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="50.9" y="599.2">+Id: byte[]</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="50.9" y="615.2">+Payload: byte[]</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="50.9" y="631.2">+Type: byte[]</text>
+    <rect style="fill: #ffffff" x="47.9" y="638" width="318" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="47.9" y="638" width="318" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="50.9" y="651.2">+GetEnumerator(): Enumerator&lt;NdefRecord&gt;</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="43.9" y="431" width="302.6" height="44"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43.9" y="431" width="302.6" height="44"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="195.2" y="446.2">&lt;&lt;NdefRecord&gt;&gt;</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="195.2" y="467">NdefTextRecord</text>
+    <rect style="fill: #ffffff" x="43.9" y="475" width="302.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43.9" y="475" width="302.6" height="8"/>
+    <rect style="fill: #ffffff" x="43.9" y="483" width="302.6" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43.9" y="483" width="302.6" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46.9" y="496.2">+Text(): string</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46.9" y="512.2">+IsRecordType(record:NdefRecord): bool</text>
+  </g>
 </svg>

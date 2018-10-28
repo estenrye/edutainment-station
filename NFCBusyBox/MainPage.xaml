@@ -26,30 +26,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Canvas Name="backgroundCanvas" Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="3" Background="Red" />
+        <Canvas Grid.Row="1" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="3" Background="{x:Bind Path=display.Background, Mode=OneWay}" />
         <Rectangle Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Fill="#33000000"/>
-        <TextBlock Name="ForegroundText" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Text="Red" TextAlignment="Center" VerticalAlignment="Center" FontSize="125" FontWeight="ExtraBold" Foreground="White"/>
-        <TextBlock Name="DeviceStatus" Grid.Row="0" Grid.Column="0" Text="NoDevice!"/>
-        <TextBlock Name="Id" Grid.Row="0" Grid.Column="1" Text="No Id!"/>
-        <TextBlock Name="Message" Grid.Row="0" Grid.Column="2" Text="No Message"/>
-        <Button Name="RedButton" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Red" Background="Red" Click="UpdateDisplay_Click"/>
-        <Button Name="OrangeButton" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Orange" Background="Orange" Click="UpdateDisplay_Click"/>
-        <Button Name="YellowButton" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Yellow" Background="Yellow" Click="UpdateDisplay_Click"/>
-        <Button Name="GreenButton" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Green" Background="Green" Click="UpdateDisplay_Click"/>
-        <Button Name="BlueButton" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Blue" Background="Blue" Click="UpdateDisplay_Click"/>
-        <Button Name="PurpleButton" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Purple" Background="Purple" Click="UpdateDisplay_Click"/>
-        <Button Name="RainbowButton" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10, 10, 10" Content="Rainbow" Click="UpdateDisplay_Click">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                    <GradientStop Color="Red" Offset="0.0"/>
-                    <GradientStop Color="Orange" Offset="0.17"/>
-                    <GradientStop Color="Yellow" Offset="0.33"/>
-                    <GradientStop Color="Green" Offset="0.5"/>
-                    <GradientStop Color="Blue" Offset="0.67"/>
-                    <GradientStop Color="Indigo" Offset="0.83"/>
-                    <GradientStop Color="Violet" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <TextBlock Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Text="{x:Bind Path=display.Foreground, Mode=OneWay}" TextAlignment="Center" VerticalAlignment="Center" FontSize="60" FontWeight="ExtraBold" Foreground="White"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="{x:Bind Path=display.DeviceStatus, Mode=OneWay}"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="{x:Bind Path=display.Message, Mode=OneWay}"/>
     </Grid>
 </Page>
