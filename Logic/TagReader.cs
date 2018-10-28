@@ -11,6 +11,8 @@ namespace Logic
     public class TagReader
     {
         private ProximityDevice proximityDevice;
+        private Buzzer buzzer;
+
         private bool Debug;
         private long subscriptionIdNdef = 0;
         public event EventHandler<DeviceStatusChangedEventArgs> OnDeviceStatusChanged;
@@ -18,10 +20,12 @@ namespace Logic
 
         public TagReader()
         {
+            buzzer = new Buzzer();
             proximityDevice = ProximityDevice.GetDefault();
             if (proximityDevice != null)
             {
                 proximityDevice.DeviceArrived += OnDeviceArrived;
+                OnDeviceStatusChanged += buzzer.OnDevicesStatusChanged;
                 proximityDevice.DeviceDeparted += OnDeviceDeparted;
             }
         }

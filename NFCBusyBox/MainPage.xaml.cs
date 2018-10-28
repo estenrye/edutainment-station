@@ -22,7 +22,6 @@ namespace NFCBusyBox
     public sealed partial class MainPage : Page
     {
         private Display display;
-        private GpioPin DebugModePin = null;
 
         public MainPage()
         {
@@ -31,23 +30,8 @@ namespace NFCBusyBox
             display = new Display();
             DataContext = display;
 
-            //var gpioController = GpioController.GetDefault();
-            //DebugModePin = gpioController.OpenPin(7, GpioSharingMode.SharedReadOnly);
-            //DebugModePin.ValueChanged += Pin_ValueChanged;
-            //var debugModeValue = DebugModePin.Read();
-            //DebugMode = debugModeValue == GpioPinValue.High;
         }
 
 
-        private void Pin_ValueChanged(GpioPin sender, GpioPinValueChangedEventArgs args)
-        {
-            if (sender.PinNumber == 7)
-            {
-                if (args.Edge == GpioPinEdge.FallingEdge)
-                {
-                    
-                }
-            }
-        }
     }
 }
