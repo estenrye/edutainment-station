@@ -12,6 +12,7 @@ namespace Logic
     {
         private TagReader tagReader;
         private CoreDispatcher coreDispatcher;
+        private DebugSwitch debugSwitch;
         private bool Debug = false;
 
         private string deviceStatus;
@@ -58,11 +59,18 @@ namespace Logic
             tagReader.OnMessageArrived += OnMessageArrived;
             OnToggleDebug += tagReader.ToggleDebug;
             coreDispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
+            debugSwitch = new DebugSwitch();
+            debugSwitch.DebugStatusChagned += DebugSwitch_DebugStatusChagned;
 
             Log = string.Empty;
             Background = SelectBackgroundFromMessage(null);
             Foreground = "READY";
             Message = "Please scan a tag.";
+        }
+
+        private void DebugSwitch_DebugStatusChagned(object sender, DebugStatusChangedEventArgs e)
+        {
+            Debug = e.DebugStatus;
         }
 
         private void OnMessageArrived(object sender, MessageArrivedEventArgs e)

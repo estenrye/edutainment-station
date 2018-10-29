@@ -22,7 +22,7 @@ namespace NFCBusyBox
     public sealed partial class MainPage : Page
     {
         private Display display;
-
+        
         public MainPage()
         {
             this.InitializeComponent();

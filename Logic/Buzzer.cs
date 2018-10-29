@@ -9,7 +9,6 @@ namespace Logic
         private GpioPin Pin = null;
         const int GPIO_22 = 22;
 
-
         public Buzzer()
         {
             var gpioController = GpioController.GetDefault();

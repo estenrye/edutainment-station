@@ -108,6 +108,7 @@
   <ItemGroup>
     <Compile Include="Buzzer.cs" />
     <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="DebugSwitch.cs" />
     <Compile Include="Display.cs" />
     <Compile Include="Events\DebugStatusChangedEventArgs.cs" />
     <Compile Include="Events\DeviceStatusChangedEventArgs.cs" />
