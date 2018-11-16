@@ -18,7 +18,7 @@ namespace Logic
         public DebugSwitch()
         {
             var gpioController = GpioController.GetDefault();
-            Pin = gpioController.OpenPin(GPIO_4, GpioSharingMode.SharedReadOnly);
+            Pin = gpioController.OpenPin(GPIO_4, GpioSharingMode.Exclusive);
             Pin.SetDriveMode(GpioPinDriveMode.InputPullDown);
             Pin.ValueChanged += OnValueChanged;
         }
