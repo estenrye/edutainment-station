@@ -71,6 +71,15 @@ The key selection criteria for the processer were the following:
 | Communications Standards |  5 |  5 |  1 |  3 |  1 |
 | Total                    | 21 | 19 | 16 | 17 | 13 |
 
+### A/D Converter and DAC Evaluation
+
+| Criteria | NXP OM5577 | NXP PN532 |
+| --- | --- | --- |
+| Natively Supported by Windows IOT Core | Yes | No |
+| Price | $27 | $39.95 |
+| Actual Cost | $0 (Supplied by NXP) | $0 (Available on Hand) |
+| PI HAT Form Factor | Yes | No |
+
 ## Component Design and Testing
 
 ## System Integration and Testing
