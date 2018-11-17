@@ -13,6 +13,8 @@
 
 ## Requirements
 
+![Front Panel of Edutainment Station](.imgs/Design.PNG)
+
 | Name | Edutainment Station |
 | ---- | ------------------- |
 | **Purpose** | An expandable entertainment/education platform used to teach my daughter primary and secondary colors through an interactive display triggered by physical objects tagged with NFC tags. |
