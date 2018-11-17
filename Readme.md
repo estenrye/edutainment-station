@@ -39,11 +39,26 @@ The Tag class represents the physical objects with embedded NFC tags.  These obj
 
 ![State Diagram](.imgs/State_Diagram.PNG)
 
-The system is driven by aperiodic inputs, NFC tag reads.  The NFC Tags can be served by an interrupt driven routine that will select and display the appropriate screen based on the Tag that has been read.  -
+- The system is driven by aperiodic inputs, NFC tag reads.  The reading of NFC Tags can be served by an interrupt driven routine that will select and display the appropriate screen based on the Tag that has been read.
+- Display changes can be handled by a dedicated UI thread.  This thread will respond to events triggered by the interrupt routine.
+
+### Miscellaneous Constraints Placed on the Hardware by the Software
+
+- Hardware must support Windows IOT Core 
+- The hardware must support an operating system that is to run both .Net Core UWP and .Net Framework UWP Applications as the developer is most familiar with the Microsoft Universal Windows Platform (UWP) framework for UI programming and design.
+- The hardware must support an operating system that enables remote debugging using the Visual Studio Remote Debugger.
+- The hardware must support an operating system that provides native touch and NFC driver support.
+
+### Miscellanous Constraints Placed on the Software by the Hardware
+
+- Software must be tolerant of being forcefully shutdown by the user.
+- Software must use the Windows.Networking.Proximity Namespace to communicate with the NFC device.
+- Software must design the UI to be clearly visible on a 7-inch LCD touch screen with a maximum resolution of 800 x 480 pixels.
+- Software must trigger the buzzer when an NFC Tag is read as the Buzzer and NFC device are separate hardware units.
 
 ### Processor Evaluation
 
-The following criteria were used to select the processor and platform to build this project.
+Five processors/development boards were evaluated for selection as part of this project.  The table below summarizes their capabilities.
 
 | Criteria | Raspberry Pi 3 Model B | Raspberry Pi 3 Model B+ | MinnowBoard Turbot Quad-Core | Dragonboard 410c | AAEON Up Squared |
 | --- | --- | --- | --- | --- | --- |
@@ -63,6 +78,12 @@ The following criteria were used to select the processor and platform to build t
 
 The key selection criteria for the processer were the following:
 
+* Does the processor/development board support Windows IOT Core?
+* What is the actual cost to acquire the processor/development board?
+* What communications technologies are available on the development board?  How can I connect a remote debugger to the device?
+* Does the processor/development board include a graphics co-processor?  How fast is it?
+* How fast is the main processor?
+
 | Criteria | Raspberry Pi 3 Model B | Raspberry Pi 3 Model B+ | MinnowBoard Turbot Quad-Core | Dragonboard 410c | AAEON Up Squared |
 | --- | --- | --- | --- | --- | --- |
 | Actual Cost              |  5 |  4 |  1 |  3 |  1 |
@@ -72,7 +93,11 @@ The key selection criteria for the processer were the following:
 | Communications Standards |  5 |  5 |  1 |  3 |  1 |
 | Total                    | 21 | 19 | 16 | 17 | 13 |
 
+The processor selected for this project was the Broadcom BCM2837 ARM Cortex A53 on the Raspberry Pi 3 Model B.
+
 ### A/D Converter and DAC Evaluation
+
+The A/D and DAC utilized in this project is embedded within the NFC Device selected for the project.  Two NFC devices were evaluated as part of this project.  Both of these devices were freely available to the developer.
 
 | Criteria | NXP OM5577 | NXP PN532 |
 | --- | --- | --- |
@@ -80,6 +105,8 @@ The key selection criteria for the processer were the following:
 | Price | $27 | $39.95 |
 | Actual Cost | $0 (Supplied by NXP) | $0 (Available on Hand) |
 | PI HAT Form Factor | Yes | No |
+
+Prototypes were built using each of the NFC devices, but ultimately the NXP OM5577 was selected for its ease of implemntation and native support for Windows IOT Core.
 
 ## Component Design and Testing
 
