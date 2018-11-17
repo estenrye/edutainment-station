@@ -60,6 +60,16 @@ The following criteria were used to select the processor and platform to build t
 | GPIO Pins | 40 | 40 | 26 | 40 | 40 |
 | Datasheets | [Raspberry Pi 3 Model B](https://www.adafruit.com/product/3055) | [Raspberry Pi 3 B+](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf) | [MinnowBoard Turbot Quad-Core](https://minnowboard.org/minnowboard-turbot/technical-specs) [Intel Atom E38xx Data Sheet](https://www.intel.com/content/dam/www/public/us/en/documents/datasheets/atom-e3800-family-datasheet.pdf) | [DragonBoard 410c](https://developer.qualcomm.com/hardware/dragonboard-410c) [Qualcomm SnapDragon 410c datasheet](https://www.qualcomm.com/media/documents/files/snapdragon-410-processor-product-brief.pdf) [Adreno Wikipedia](https://en.wikipedia.org/wiki/Adreno) | [Datasheet](https://up-board.org/wp-content/uploads/datasheets/UP-Square-DatasheetV0.5.pdf) [UP Shop](https://up-shop.org/home/270-up-squared.html#/95-up_squared_board-celeron_duo_core_2gb_memory_32gb_emmc) [Intel Datasheet](https://ark.intel.com/products/95598/Intel-Celeron-Processor-N3350-2M-Cache-up-to-2-4-GHz-) |
 
+The key selection criteria for the processer were the following:
+
+| Criteria | Raspberry Pi 3 Model B | Raspberry Pi 3 Model B+ | MinnowBoard Turbot Quad-Core | Dragonboard 410c | AAEON Up Squared |
+| --- | --- | --- | --- | --- | --- |
+| Actual Cost              |  5 |  4 |  1 |  3 |  1 |
+| Clock Speed              |  2 |  3 |  4 |  2 |  5 |
+| Video Core Clock Speed   |  4 |  4 |  5 |  4 |  1 |
+| Supports IOT Core        |  5 |  3 |  5 |  5 |  5 |
+| Communications Standards |  5 |  5 |  1 |  3 |  1 |
+| Total                    | 21 | 19 | 16 | 17 | 13 |
 
 ## Component Design and Testing
 
