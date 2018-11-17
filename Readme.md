@@ -44,22 +44,21 @@ Draw state diagram from touch input interrupt to display update.
 
 The following criteria were used to select the processor and platform to build this project.
 
-| Criteria | Raspberry Pi 3 Model B | Raspberry Pi 3 Model B+ | MinnowBoard Turbot Quad-Core | Dragonboard 410c |
-| --- | --- | --- | --- | --- |
-| Price | $35 | $35 | $189.95 | $75 |
-| Actual Cost | $0 (development board available on-hand) | $35 | $189.95 | $75 |
-| Main Processor | Broadcom BCM2837, ARM Cortex A53 | Broadcom BCM2837B0, ARM Cortex A53 | Quad-Core Intel® Atom™ E3845 | Qualcomm® Snapdragon™ 410, ARM Cortex A53 |
-| Clock Speed | 1.2 GHz | 1.4 GHz | 1.91 GHz | 1.2 GHz |
-| Core Count | 4 | 4 | 4 | 4 |
-| Volatile Memory | 1 GB | 1 GB | 2 GB | 1 GB |
-| Non-Volatile Memory | 0 MB on chip.  SD Card Slot | 0 MB on chip.  SD Card Slot | 8 MB SPI Flash, mPcie/SATA/USB | 8 MB eMMC Flash, SD Card Slot |
-| Video Core Clock Speed | 400 MHz | 400 MHz | 542 MHz | 400 MHz | 
-| Supports Windows IOT Core | Yes | Technical Preview | Yes | Yes |
-| Graphics Connectivity | HDMI (Full), Display DSI Connector | HDMI (Full), Display DSI Connector | HDMI (Micro) | HDMI (Full) |
-| Quantity Needed | 1 | 1 | 1 | 1 |
-| Communication Standards | 100 Mbps Ethernet, 2.4 GHz 802.11 a/b/n, BLE | 300 Mbps Ethernet, 2.4 GHz/5 GHz 802.11 b/g/n/ac, BLE | 1 Gbps Ethernet | 2.4 GHz 802.11 b/g/n, BLE |
-| GPIO Pins | 40 | 40 | 26 | 40 |
-| Datasheets | [Raspberry Pi 3 Model B](https://www.adafruit.com/product/3055) | [Raspberry Pi 3 B+](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf) | [MinnowBoard Turbot Quad-Core](https://minnowboard.org/minnowboard-turbot/technical-specs) [Intel Atom E38xx Data Sheet](https://www.intel.com/content/dam/www/public/us/en/documents/datasheets/atom-e3800-family-datasheet.pdf) | [DragonBoard 410c](https://developer.qualcomm.com/hardware/dragonboard-410c) [Qualcomm SnapDragon 410c datasheet](https://www.qualcomm.com/media/documents/files/snapdragon-410-processor-product-brief.pdf) [Adreno Wikipedia](https://en.wikipedia.org/wiki/Adreno) |
+| Criteria | Raspberry Pi 3 Model B | Raspberry Pi 3 Model B+ | MinnowBoard Turbot Quad-Core | Dragonboard 410c | AAEON Up Squared |
+| --- | --- | --- | --- | --- | --- |
+| Price | $35 | $35 | $189.95 | $75 | $149 |
+| Actual Cost | $0 (development board available on-hand) | $35 | $189.95 | $75 | $149 |
+| Main Processor | Broadcom BCM2837, ARM Cortex A53 | Broadcom BCM2837B0, ARM Cortex A53 | Quad-Core Intel® Atom™ E3845 | Qualcomm® Snapdragon™ 410, ARM Cortex A53 | Intel Celeron N3350 |
+| Clock Speed | 1.2 GHz | 1.4 GHz | 1.91 GHz | 1.2 GHz | 2.4 GHz |
+| Core Count | 4 | 4 | 4 | 4 | 2 |
+| Volatile Memory | 1 GB | 1 GB | 2 GB | 1 GB | 2 GB |
+| Non-Volatile Memory | 0 MB on chip.  SD Card Slot | 0 MB on chip.  SD Card Slot | 8 MB SPI Flash, mPcie/SATA/USB | 8 MB eMMC Flash, SD Card Slot | 32 GB eMMC Flash, SATA3 |
+| Video Core Clock Speed | 400 MHz | 400 MHz | 542 MHz | 400 MHz | 200 MHz |
+| Supports Windows IOT Core | Yes | Technical Preview | Yes | Yes | Yes |
+| Graphics Connectivity | HDMI (Full), Display DSI Connector | HDMI (Full), Display DSI Connector | HDMI (Micro) | HDMI (Full) | HDMI, DisplayPort |
+| Communication Standards | 100 Mbps Ethernet, 2.4 GHz 802.11 a/b/n, BLE | 300 Mbps Ethernet, 2.4 GHz/5 GHz 802.11 b/g/n/ac, BLE | 1 Gbps Ethernet | 2.4 GHz 802.11 b/g/n, BLE | Dual Gigabit Ethernet |
+| GPIO Pins | 40 | 40 | 26 | 40 | 40 |
+| Datasheets | [Raspberry Pi 3 Model B](https://www.adafruit.com/product/3055) | [Raspberry Pi 3 B+](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf) | [MinnowBoard Turbot Quad-Core](https://minnowboard.org/minnowboard-turbot/technical-specs) [Intel Atom E38xx Data Sheet](https://www.intel.com/content/dam/www/public/us/en/documents/datasheets/atom-e3800-family-datasheet.pdf) | [DragonBoard 410c](https://developer.qualcomm.com/hardware/dragonboard-410c) [Qualcomm SnapDragon 410c datasheet](https://www.qualcomm.com/media/documents/files/snapdragon-410-processor-product-brief.pdf) [Adreno Wikipedia](https://en.wikipedia.org/wiki/Adreno) | [Datasheet](https://up-board.org/wp-content/uploads/datasheets/UP-Square-DatasheetV0.5.pdf) [UP Shop](https://up-shop.org/home/270-up-squared.html#/95-up_squared_board-celeron_duo_core_2gb_memory_32gb_emmc) [Intel Datasheet](https://ark.intel.com/products/95598/Intel-Celeron-Processor-N3350-2M-Cache-up-to-2-4-GHz-) |
 
 
 ## Component Design and Testing
