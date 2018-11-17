@@ -35,12 +35,11 @@
 
 The Tag class represents the physical objects with embedded NFC tags.  These objects will have one or more `animationIds` transmitted to the TagReader class when the object reaches close enough proximity to the NFC Controller's antenna.  The TagReader class encapsulates the NFC Controller logic into a single interface class.  When the `OnTagAdded` event is triggered, `HandleTag` will read the data on the NFC tag and notify the `Controller` class the tag has been read using the `NotifyTagRead` method.  Upon notification of a NFC tag read, the `Controller` class activates the `Buzzer` using the `Buzz` method and updates the `Display` by passing the first `animationId` to the `UpdateDisplay` method.  If the user touches the display, the `Display` class will notify the `Controller` class using the `NotifyTouchInput` method.  The `Controller` class will determine the next `animationId` to send to the `Display` class using `UpdateDisplay`.  If only one `animationId` is available, it will be sent again.
 
-**Notes for next time.**
-NFC Tag reads are interrupt driven.
-Draw state diagram from interrupt to display update.
-Draw state diagram from touch input interrupt to display update.
-
 ## System Architecture
+
+![State Diagram](.imgs/State_Diagram.PNG)
+
+The system is driven by aperiodic inputs, NFC tag reads.  The NFC Tags can be served by an interrupt driven routine that will select and display the appropriate screen based on the Tag that has been read.  -
 
 ### Processor Evaluation
 
