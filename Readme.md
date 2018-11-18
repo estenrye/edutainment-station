@@ -1,16 +1,5 @@
 # Edutainment Station for Raspberry Pi 3 Model B
 
-## Hardware Components
-- 1 [Raspberry Pi 3 Model B v1.2](https://www.adafruit.com/product/3055)
-- 1 [NXP PN7150 NFC Controller SBC Kit for Raspberry Pi](https://www.nxp.com/products/identification-and-security/nfc/nfc-reader-ics/development-kits-for-pn7150-plugn-play-nfc-controller:OM5578)
-- 1 [Raspberry Pi 7" Touchscreen Display](https://www.amazon.com/gp/product/B0153R2A9I/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
-- 7 [13.56 MHz RFID/NFC White Tag - 1 KB](https://www.adafruit.com/product/360)
-
-## Software Packages
-
-- [Etcher](https://etcher.io/)
-- [Windows Driver Kit (WDK)](https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)
-
 ## Requirements
 
 ![Front Panel of Edutainment Station](.imgs/Design.PNG)
@@ -34,6 +23,16 @@
 ![Edutainment System Class Diagram](.imgs/ClassDiagram.svg)
 
 The Tag class represents the physical objects with embedded NFC tags.  These objects will have one or more `animationIds` transmitted to the TagReader class when the object reaches close enough proximity to the NFC Controller's antenna.  The TagReader class encapsulates the NFC Controller logic into a single interface class.  When the `OnTagAdded` event is triggered, `HandleTag` will read the data on the NFC tag and notify the `Controller` class the tag has been read using the `NotifyTagRead` method.  Upon notification of a NFC tag read, the `Controller` class activates the `Buzzer` using the `Buzz` method and updates the `Display` by passing the first `animationId` to the `UpdateDisplay` method.  If the user touches the display, the `Display` class will notify the `Controller` class using the `NotifyTouchInput` method.  The `Controller` class will determine the next `animationId` to send to the `Display` class using `UpdateDisplay`.  If only one `animationId` is available, it will be sent again.
+
+### Hardware Components
+- 1 [Raspberry Pi 3 Model B v1.2](https://www.adafruit.com/product/3055)
+- 1 [NXP PN7150 NFC Controller SBC Kit for Raspberry Pi](https://www.nxp.com/products/identification-and-security/nfc/nfc-reader-ics/development-kits-for-pn7150-plugn-play-nfc-controller:OM5578)
+- 1 [Raspberry Pi 7" Touchscreen Display](https://www.amazon.com/gp/product/B0153R2A9I/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
+- 7 [13.56 MHz RFID/NFC White Tag - 1 KB](https://www.adafruit.com/product/360)
+
+### Software Packages
+
+- [Windows Driver Kit (WDK)](https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)
 
 ## System Architecture
 
@@ -64,7 +63,7 @@ Five processors/development boards were evaluated for selection as part of this 
 | --- | --- | --- | --- | --- | --- |
 | Price | $35 | $35 | $189.95 | $75 | $149 |
 | Actual Cost | $0 (development board available on-hand) | $35 | $189.95 | $75 | $149 |
-| Main Processor | Broadcom BCM2837, ARM Cortex A53 | Broadcom BCM2837B0, ARM Cortex A53 | Quad-Core Intel� Atom� E3845 | Qualcomm� Snapdragon� 410, ARM Cortex A53 | Intel Celeron N3350 |
+| Main Processor | Broadcom BCM2837, ARM Cortex A53 | Broadcom BCM2837B0, ARM Cortex A53 | Quad-Core Intel Atom E3845 | Qualcomm Snapdragon 410, ARM Cortex A53 | Intel Celeron N3350 |
 | Clock Speed | 1.2 GHz | 1.4 GHz | 1.91 GHz | 1.2 GHz | 2.4 GHz |
 | Core Count | 4 | 4 | 4 | 4 | 2 |
 | Volatile Memory | 1 GB | 1 GB | 2 GB | 1 GB | 2 GB |
@@ -167,10 +166,16 @@ Testing will be performed manually by programming several NFC tags with expected
 ## Memory Map
 
 ![Memory Map](.imgs/Memory_Map.PNG)
+
+[Broadcom. (2012)](https://web.stanford.edu/class/cs140e/docs/BCM2837-ARM-Peripherals.pdf)
+
 ## References
 
-- DigiKey. (2016). [Product highlights:&nbsp;PN7150 plug-and-play NFC controller.](https://www.digikey.com/en/product-highlight/n/nxp-semi/pn7150-plug-n-play?utm_adgroup=General&slid=&gclid=Cj0KCQjw6rXeBRD3ARIsAD9ni9B7nDjbrQYIem_JmXNQUI-djQaeZzJiTdwNge0e3Wtz6qj8bwgBioQaAozsEALw_wcB)
-- Jameco [Electronics.Raspberry pi pinout diagram | circuit notes.](https://www.jameco.com/Jameco/workshop/circuitnotes/raspberry-pi-circuit-note.html)
-- NXP. (2017). [PN71x0 windows IoT porting guidelines.](https://www.nxp.com/docs/en/application-note/AN11767.pdf)
-- NXP. (2018). [PN7150 Product Data Sheet.](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
-- shabaz. (2017). [Raspberry Pi 3 Block Diagram.](https://www.element14.com/community/community/raspberry-pi/blog/2017/01/16/raspberry-pi-3-block-diagram)
+- Adafruit. (2016). Raspberry pi 3 - model B - ARMv8 with 1G RAM. Retrieved from https://www.adafruit.com/product/3055
+- Broadcom. (2012). BCM2837 ARM peripherals. Retrieved from https://web.stanford.edu/class/cs140e/docs/BCM2837-ARM-Peripherals.pdf
+- DigiKey. (2016). Product highlights: PN7150 plug-and-play NFC controller. Retrieved from https://www.digikey.com/en/product-highlight/n/nxp-semi/pn7150-plug-n-play?utm_adgroup=General&slid=&gclid=Cj0KCQjw6rXeBRD3ARIsAD9ni9B7nDjbrQYIem_JmXNQUI-djQaeZzJiTdwNge0e3Wtz6qj8bwgBioQaAozsEALw_wcB
+- Jameco Electronics.Raspberry pi pinout diagram | circuit notes. Retrieved from https://www.jameco.com/Jameco/workshop/circuitnotes/raspberry-pi-circuit-note.html
+- NXP.OM5578: Development kits for PN7150 plug’n play NFC controller. Retrieved from https://www.nxp.com/products/identification-and-security/nfc/nfc-reader-ics/development-kits-for-pn7150-plugn-play-nfc-controller:OM5578
+- NXP. (2017). PN71x0 windows IoT porting guidelines. Retrieved from https://www.nxp.com/docs/en/application-note/AN11767.pdf
+- NXP. (2018). PN7150 product data sheet. Retrieved from https://www.nxp.com/docs/en/data-sheet/PN7150.pdf
+- shabaz. (2017). Raspberry pi 3 blcok diagram. Retrieved from https://www.element14.com/community/community/raspberry-pi/blog/2017/01/16/raspberry-pi-3-block-diagram
