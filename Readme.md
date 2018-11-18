@@ -64,7 +64,7 @@ Five processors/development boards were evaluated for selection as part of this 
 | --- | --- | --- | --- | --- | --- |
 | Price | $35 | $35 | $189.95 | $75 | $149 |
 | Actual Cost | $0 (development board available on-hand) | $35 | $189.95 | $75 | $149 |
-| Main Processor | Broadcom BCM2837, ARM Cortex A53 | Broadcom BCM2837B0, ARM Cortex A53 | Quad-Core Intel® Atom™ E3845 | Qualcomm® Snapdragon™ 410, ARM Cortex A53 | Intel Celeron N3350 |
+| Main Processor | Broadcom BCM2837, ARM Cortex A53 | Broadcom BCM2837B0, ARM Cortex A53 | Quad-Core Intelï¿½ Atomï¿½ E3845 | Qualcommï¿½ Snapdragonï¿½ 410, ARM Cortex A53 | Intel Celeron N3350 |
 | Clock Speed | 1.2 GHz | 1.4 GHz | 1.91 GHz | 1.2 GHz | 2.4 GHz |
 | Core Count | 4 | 4 | 4 | 4 | 2 |
 | Volatile Memory | 1 GB | 1 GB | 2 GB | 1 GB | 2 GB |
@@ -110,7 +110,43 @@ Prototypes were built using each of the NFC devices, but ultimately the NXP OM55
 
 ## Component Design and Testing
 
+The processor used in this project was selected for its support of the Microsoft Universal Windows Platform (UWP) development tools.  Microsoft provides Visual Studio Community Edition as part of the UWP free of charge to its developers and includes robust emulation, debugging and performance anlaysis tools.  Testing for this project will primarily be performed on the microcontroller hardware using the Remote Debugging Tools provided by Visual Studio Community Edition.  Use cases will be verified to be functional through a series of manual tests.
+
+### Processor Bandwidth Estimation
+
+As part of the selection process for the processor, an initial prototype of the application was developed and key use cases were tested in an emulator to verify the processor had enough bandwidth to support the project.  Below is a graph demonstrating those results:
+
+![CPU Utilization Graph](.imgs/CPU_Utilization.PNG)
+
+We can see in the first 2.5 seconds of the application's lifecycle, we can expect it to utilize 43% of all available processors as it loads the application and framework into memory and initializes the devices and UI.  After this initialization period, the CPU remains idle until an interrupt is triggered by the arrival of a NFC tag.  When this occurs, CPU utilization spikes to a maximum of 10% of all available processors as the application selects the next visualization and draws it on the screen.  Based on this simulation, there is suficient bandwidth for the current functionality and future development of the project
+
+### Volatile Memory Estimation
+
+The memory usage of the application was also profiled in an emulator prior to selecting the processor.  Below is a graph demonstrating those results:
+
+![Memory Utilization Graph](.imgs/Memory_Utilization.PNG)
+
+We can see in the first 5 seconds of the application's lifecycle, we can expect it to use 7.4 MB of volatile memory as it loads the application and framework into memory and initializes the devices and UI.  After this initialization period, the memory usage remains constant until an interrupt is triggered by the arrival of a NFC tag.  When this occurs, volatile memory usage temporarily spikes to 7.7 MB and then settles at 7.5 MB.  This memory usage is well below the 1 GB of available memory indicating there is sufficient volatile memory for the current functionality and future development.
+
+### Non-Volatile Memory Estimation
+
+The device is currently provisioned with a 32 GB Micro SD Card.  1.64 GB is consumed by the Windows IOT Core operating system and drivers.  0.16 GB is consumed by the application.
+
 ## System Integration and Testing
+
+Testing will be performed manually by programming several NFC tags with expected and unexpected inputs.  The following use cases will be tested:
+
+| Tag Id  | Expected Output |
+| ------- | --------------- |
+| red     | red background with word `RED` in white capital letters displayed on the screen. |
+| orange  | orange background with word `ORANGE` in white capital letters displayed on the screen. |
+| yellow  | yellow background with word `YELLOW` in white capital letters displayed on the screen. |
+| green   | green background with word `GREEN` in white capital letters displayed on the screen. |
+| blue    | blue background with word `BLUE` in white capital letters displayed on the screen. |
+| purple  | purple background with word `PURPLE` in white capital letters displayed on the screen. |
+| brown   | brown background with word `BROWN` in white capital letters displayed on the screen. |
+| rainbow | horizontal gradient rainbow background from red to violet with word `RAINBOW` in white capital letters displayed on the screen. |
+| other   | black background with word `OTHER` in white capital letters displayed on the screen. |
 
 ## Block Diagrams
 
@@ -128,6 +164,9 @@ Prototypes were built using each of the NFC devices, but ultimately the NXP OM55
 
 [NXP. (2018)](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
 
+## Memory Map
+
+![Memory Map](.imgs/Memory_Map.PNG)
 ## References
 
 - DigiKey. (2016). [Product highlights:&nbsp;PN7150 plug-and-play NFC controller.](https://www.digikey.com/en/product-highlight/n/nxp-semi/pn7150-plug-n-play?utm_adgroup=General&slid=&gclid=Cj0KCQjw6rXeBRD3ARIsAD9ni9B7nDjbrQYIem_JmXNQUI-djQaeZzJiTdwNge0e3Wtz6qj8bwgBioQaAozsEALw_wcB)
