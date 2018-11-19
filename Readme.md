@@ -159,6 +159,8 @@ Testing will be performed manually by programming several NFC tags with expected
 
 ### NXP PN7150 Block Diagram
 
+![Component Diagram](.imgs/Block-Component-Diagram.PNG)
+
 ![NXP PN7150 Block Diagram](.imgs/PN7150-Block-Diagram.PNG)
 
 [NXP. (2018)](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
